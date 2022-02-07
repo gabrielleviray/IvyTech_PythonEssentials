@@ -1,0 +1,5 @@
+print("Gabrielle Viray")
+print("I am from South San Francisco, California.")
+print("I am also a student at San Jose State University.")
+print("I have five older brothers.")
+print("I love playing video games.")
