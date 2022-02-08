@@ -1,13 +1,12 @@
 ################################
-# Program name: ampersandTriangle.py
+# Program name: telephoneNumber.py
 
 #  Author: Gabrielle Viray
 #  Course: Python Essentials
-#  Date: 2/6/2022
-#  Assignment: M03 Lecture Lab Activity - Display a pattern of ampersands
-#  Purpose: This program prompts the user for a number and uses the number to display
-#			a triangle with the height of the specified number. The triangle is filled
-# 			in using ampersands. 
+#  Date: 2/7/2022
+#  Assignment: M03 Lecture Lab Activity #4 - Convert telephone entry into numbers
+#  Purpose: This program prompts the user for a telephone number(containing both letters and numbers such as "CALL HOME")
+#			and outputs the corresponding numbers to be inputted in a telphone.
 ########################################
 
 userInput = str(input("Enter a telphone number containing letters or numbers:"))
@@ -38,20 +37,63 @@ mapping = {
 	'W'	:	'9',
 	'X'	:	'9',
 	'Y'	:	'9',
-	'Z'	:	'9'
+	'Z'	:	'9',
+	'a' :	'2',
+	'b'	:	'2',
+	'c'	:	'2',
+	'd'	:	'3',
+	'e'	:	'3',
+	'f'	:	'3',
+	'g'	:	'4',
+	'h'	:	'4',
+	'i'	:	'4',
+	'j'	:	'5',
+	'k'	:	'5',
+	'l'	:	'5',
+	'm'	:	'6',
+	'n'	:	'6',
+	'o'	:	'6',
+	'p'	:	'7',
+	'q'	:	'7',
+	'r'	:	'7',
+	's'	:	'7',
+	't'	:	'8',
+	'u'	:	'8',
+	'v'	:	'8',
+	'w'	:	'9',
+	'x'	:	'9',
+	'y'	:	'9',
+	'z'	:	'9'
 }
 
-for char in userInput:
-	print(char)
-	if char.isnumeric():
-		print(str(char), end='')
+# initalize a variable called 'count' to keep track of numbers/letters in the input
+count = 0
 
-	elif char in mapping:
-		print(mapping[char], end='')
 
-		# repeatingLetter = str.charAt(char) + 1
-		# if char == repeatingCharacter:
-		# 	char = char+2
-print('\n')
+print("\nTelephone number: ")
+# Loop through each character in the string
+for char in range(0, len(userInput)):
 
+	# If 7 characters/integers are reached, break out of the for-loop
+	if count == 7:
+		print("\n")
+		break
+
+	# If character is an empty space, do nothing and continue to the beginning of for-loop
+	if userInput[char] == ' ':
+		continue
+
+	# if the third character/number is reached print out a dash(-) for number format	
+	if count == 3:
+		print('-', end='')
+
+	# Handles integer numbers, and automatically prints out the integer
+	if userInput[char].isnumeric():
+		print(userInput[char], end='')
+		count+=1
+
+	# Handles alphabetical letters, and looks up the letter(key) in the dictionary to find the corresponding number(value) of that key
+	elif userInput[char] in mapping:
+		print(mapping[userInput[char]], end='')
+		count+=1
 

@@ -4,7 +4,7 @@
 #  Author: Gabrielle Viray
 #  Course: Python Essentials
 #  Date: 2/6/2022
-#  Assignment: M03 Lecture Lab Activity - Palindrome
+#  Assignment: M03 Lecture Lab Activity #1 - Palindrome
 #  Purpose: The program compares the letters from the beginning and end of a word to validate
 #			if the word is a palindrome. The program takes in numbers and letters.
 ########################################

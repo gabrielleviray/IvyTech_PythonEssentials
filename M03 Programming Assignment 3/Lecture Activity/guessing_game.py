@@ -4,7 +4,7 @@
 #  Author: Gabrielle Viray
 #  Course: Python Essentials
 #  Date: 2/6/2022
-#  Assignment: M03 Lecture Lab Activity - Guessing Game
+#  Assignment: M03 Lecture Lab Activity #2 - Guessing Game
 #  Purpose: The program is to write a number guessing game program. If the user
 # 			fails to guess the number after 6 attempts, the script terminates. 
 ########################################
